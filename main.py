@@ -1,9 +1,12 @@
 import discord
 from discord.ext import commands
 
-TOKEN = "MTA5NDM2NDc5MjEyNDM1MDU5Ng.GCLUgW.Yj1_l1xNJRh57jW5UqrusJINGYG2LgB4Nbi71I" # replace with your own token
+TOKEN = "MTA5NDM2NDc5MjEyNDM1MDU5Ng.GPVJ6g.Ex-8WUpgRiPYr17EVpaqBCEg0LTCaU2geZb7bs"
 
-client = commands.Bot(command_prefix="/")
+intents = discord.Intents.default()
+intents.members = True
+
+client = commands.Bot(command_prefix='/', intents=intents)
 
 @client.command()
 async def ping(ctx):
